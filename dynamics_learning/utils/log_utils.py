@@ -376,10 +376,10 @@ def log_basic(
             )'''            
 
     # log RMSE
-    pred_len = len(y_mu_p[:, :, 0])
-    RMSE_1 = np.sqrt(mean_squared_error(viz.np_y[0 : filter_length, :, 0], y_mu_p[:, :, 0]))
+    #pred_len = len(y_mu_p[:, :, 0])
+    #RMSE_1 = np.sqrt(mean_squared_error(viz.np_y[0 : filter_length, :, 0], y_mu_p[:, :, 0]))
     #RMSE_2 = np.sqrt(mean_squared_error(viz.np_y[0 : filter_length, :, 1], y_mu_p[:, :, 1]))
 
-    with buddy.log_scope("metrics"):
-        buddy.log_scalar("RMSE1", RMSE_1)
+    #with buddy.log_scope("metrics"):
+        #buddy.log_scalar("RMSE1", RMSE_1)
         #buddy.log_scalar("RMSE2", RMSE_2)
