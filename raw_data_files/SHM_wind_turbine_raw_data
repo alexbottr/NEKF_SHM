@@ -9,3 +9,4 @@ Faire pareil pour les autres fichiers white_noise
 Dans Command window, taper : whitenoise1 = whitenoise1{:,1:10};
 Faire pareil pour les autres fichiers white_noise
 Dans Workspace sélectionner tous les nouveaux fichiers white_noise puis clique-droit > Save as nom_fichier.mat
+On utilisera ce fichier .mat pour convertir les données en pickle à l'aide du fichier lvm_to_pickle.py
