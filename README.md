@@ -8,3 +8,5 @@ pip install -e .
 
 # 
 pip install -r requirements.txt
+# 
+python scripts/train_example.py
