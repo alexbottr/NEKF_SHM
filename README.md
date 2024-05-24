@@ -1,6 +1,6 @@
 # NEKF_SHM
 
-git clone https://github.com/alexbottr/NEKF_SHM
+git clone https://github.com/alexbottr/NEKF_SHM.git
 
 cd NEKF_RO
 
