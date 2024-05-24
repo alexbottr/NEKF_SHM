@@ -14,13 +14,13 @@ for i in range(len(data)):
     U = np.zeros((20000, 1))
     T=np.arange(0, 12, 6.0e-04)
     Y[:, 0] = data[i][1][:20000]
-    #Y[:, 1] = data[i][2]*1000
-    #Y[:, 2] = data[i][3]*1000
-    #Y[:, 3] = data[i][4]*1000
-    #Y[:, 4] = data[i][5]*1000
-    #Y[:, 5] = data[i][6]*1000
-    #Y[:, 6] = data[i][7]*1000
-    #Y[:, 7] = data[i][8]*1000
+    #Y[:, 1] = data[i][2]
+    #Y[:, 2] = data[i][3]
+    #Y[:, 3] = data[i][4]
+    #Y[:, 4] = data[i][5]
+    #Y[:, 5] = data[i][6]
+    #Y[:, 6] = data[i][7]
+    #Y[:, 7] = data[i][8]
     U[:, 0] = data[i][9][:20000]
     L_train.append((T, Y, U))
 
@@ -31,13 +31,13 @@ Y2 = np.zeros((20000, 1))
 U2 = np.zeros((20000, 1))
 T2=np.arange(0, 12, 6.0e-04)
 Y2[:, 0] = transposed_data_val[1][:20000]
-#Y2[:, 1] = transposed_data_val[2]*1000
-#Y2[:, 2] = transposed_data_val[3]*1000
-#Y2[:, 3] = transposed_data_val[4]*1000
-#Y2[:, 4] = transposed_data_val[5]*1000
-#Y2[:, 5] = transposed_data_val[6]*1000
-#Y2[:, 6] = transposed_data_val[7]*1000
-#Y2[:, 7] = transposed_data_val[8]*1000
+#Y2[:, 1] = transposed_data_val[2]
+#Y2[:, 2] = transposed_data_val[3]
+#Y2[:, 3] = transposed_data_val[4]
+#Y2[:, 4] = transposed_data_val[5]
+#Y2[:, 5] = transposed_data_val[6]
+#Y2[:, 6] = transposed_data_val[7]
+#Y2[:, 7] = transposed_data_val[8]
 U2[:, 0] = transposed_data_val[9][:20000]
 L_val.append((T2, Y2, U2))
 
