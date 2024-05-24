@@ -2,7 +2,7 @@
 
 git clone https://github.com/alexbottr/NEKF_SHM.git
 
-cd NEKF_RO
+cd NEKF_SHM
 
 pip install -e .
 
