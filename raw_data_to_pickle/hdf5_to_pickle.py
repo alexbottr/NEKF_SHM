@@ -10,20 +10,19 @@ def traverse_group_first_line(group, prefix=""):
             continue
         
         elif isinstance(group[key], h5py.Dataset):
-            dataset = group[key][()]  # Obtenez les données du dataset
-            Y = np.zeros((75, 1))
-            U = np.zeros((75, 0))
+            dataset = group[key][()]
+            Y = np.zeros((150, 1))
+            U = np.zeros((150, 0))
             #Y[0, :] = [0.0, 0.0, 0.0, 0.0, 0.0]
-            Y[:, 0] = dataset[2][:150:2] * 10
-            #Y[:, 1] = dataset[3][:5000:5] * 10
-            #Y[:, 2] = dataset[4][:5000:5] * 10
-            #Y[:, 3] = dataset[5][:5000:5] * 10
-            #Y[:, 4] = dataset[6][:5000:5] * 10
+            Y[:, 0] = dataset[2][:150]
+            #Y[:, 1] = dataset[3][:5000]
+            #Y[:, 2] = dataset[4][:5000]
+            #Y[:, 3] = dataset[5][:5000]
+            #Y[:, 4] = dataset[6][:5000]
             data_list.append((dataset[0][:150:2], Y, U))
             continue
 
         elif isinstance(group[key], h5py.Group):
-            # Assurez-vous de fournir le bon préfixe lors de la récursion
             data_list.extend(traverse_group_first_line(group[key], prefix=f"{prefix}/{key}"))
 
     return data_list
