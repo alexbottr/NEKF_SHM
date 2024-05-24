@@ -19,7 +19,7 @@ def traverse_group_first_line(group, prefix=""):
             #Y[:, 2] = dataset[4][:5000]
             #Y[:, 3] = dataset[5][:5000]
             #Y[:, 4] = dataset[6][:5000]
-            data_list.append((dataset[0][:150:2], Y, U))
+            data_list.append((dataset[0][:150], Y, U))
             continue
 
         elif isinstance(group[key], h5py.Group):
