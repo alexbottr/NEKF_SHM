@@ -1,0 +1,11 @@
+https://zenodo.org/records/3229743#.X5sihHVKjwp
+
+download Case_R_(+25).zip
+>Case_R_(+25)>Case_R_(+25)_1>
+Télécharger white_noise_1.lvm .... white_noise_2.lvm et les ouvrir sur Matlab
+Matlab : clique droit sur white_noise_1.lvm> Import Data
+Ouverture d'une nouvelle fenêtre > Dans range, copier-coller : B24:I209939,N24:N209939 et faire Import selection > Import data
+Faire pareil pour les autres fichiers white_noise
+Dans Command window, taper : whitenoise1 = whitenoise1{:,1:10};
+Faire pareil pour les autres fichiers white_noise
+Dans Workspace sélectionner tous les nouveaux fichiers white_noise puis clique-droit > Save as nom_fichier.mat
