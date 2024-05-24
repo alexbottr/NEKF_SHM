@@ -10,3 +10,5 @@ pip install -e .
 pip install -r requirements.txt
 # 
 python scripts/train_example.py
+#
+Z:\config\appdata\python\python311\scripts\tensorboard --logdir=./logs
