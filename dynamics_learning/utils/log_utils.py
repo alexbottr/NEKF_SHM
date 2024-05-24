@@ -4,7 +4,7 @@ from typing import Dict
 import numpy as np
 import torch
 from fannypack.utils import Buddy, to_numpy
-from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
+#from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 
 from dynamics_learning.data.datasets import VisData
 from dynamics_learning.networks.estimator import Estimator
