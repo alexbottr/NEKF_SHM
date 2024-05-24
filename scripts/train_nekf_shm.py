@@ -29,7 +29,7 @@ hy_config = HyperParameterConfig(**hyperparameter_defaults)
 dataset_config = OfflineDatasetConfig(
     traj_len=20000,
     num_viz_trajectories=1,
-    paths=['./SHM_train_1channel_6.pickle','./SHM_val_1channel_6.pickle'],
+    paths=['./converted_data/SHM_train_1channel_6.pickle','./converted_data/SHM_val_1channel_6.pickle'],
 )
 
 # EKF settings
