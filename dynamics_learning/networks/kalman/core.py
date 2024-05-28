@@ -584,7 +584,7 @@ class KalmanEstimator(Estimator):
         # log the loss components without any scaling effects applied during training
         # also apply ramped traj length to stabilize early EKF on long trajs
         iteration = buddy.optimizer_steps
-        train_len = min((10*iteration // self._ramp_iters) + 2, len(viz.t))
+        train_len = min((iteration // self._ramp_iters) + 2, len(viz.t))
         batch_t = viz.t[:train_len]
         batch_y = viz.y[:train_len]
         batch_u = viz.u[:train_len]
