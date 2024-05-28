@@ -31,10 +31,10 @@ def runtime_data_preprocess(
 ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, int]:
     """Modify training inputs."""
     # scaled traj-length curriculum
-    train_length = min((10*iteration // exp_config.ramp_iters) + 2, len(batch_t))
+    train_length = min((iteration // exp_config.ramp_iters) + 2, len(batch_t))
     print("train_length:", train_length)
     filter_length = min(
-        (10*iteration // exp_config.ramp_iters) + 2, exp_config.model.dataset.traj_len
+        (iteration // exp_config.ramp_iters) + 2, exp_config.model.dataset.traj_len
     ) #formule qui donne l'augmentation de filter_length en fct d'iteration
     if train_length < len(batch_t):
         # extract random subset of data
