@@ -19,7 +19,7 @@ pdb_safety_net()
 
 
 # Configure hyper parameters
-hyperparameter_defaults = dict(batch_size=19, learning_rate=1e-3, epochs=6000, latent_dim=3) #nb iter = (nombre_de_trajectoires)/batch_size)*epochs
+hyperparameter_defaults = dict(batch_size=19, learning_rate=1e-3, epochs=6000000, latent_dim=3) #nb iter = (nombre_de_trajectoires)/batch_size)*epochs
 
 HyperParameterConfig = namedtuple(
     "HyperParameterConfig", list(hyperparameter_defaults.keys())
@@ -44,7 +44,7 @@ model_config = EKFEstimatorConfig(
     obs_hidden_units=128,
     obs_layers=3,
     obs_nonlinearity=nn.Softplus(beta=2, threshold=20),
-    ramp_iters=1, # à changer car filter_length croit trop lentement pour un nombre de point trop grand
+    ramp_iters=100, # à changer car filter_length croit trop lentement pour un nombre de point trop grand
     burn_in=100,
     dkl_anneal_iter=1000,
     alpha=0.5,
