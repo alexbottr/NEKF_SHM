@@ -9,7 +9,7 @@ pip install -e .
 # 
 pip install -r requirements.txt
 # 
-python scripts/train_example.py
+python scripts/train_nekf_shm.py
 #
 Z:\config\appdata\python\python311\scripts\tensorboard --logdir=./logs
 w
